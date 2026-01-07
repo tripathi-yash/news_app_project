@@ -1,6 +1,9 @@
 import requests
 import time
-from config import API_KEY
+import os
+# from config import API_KEY 
+
+API_KEY = os.environ.get("API_KEY")
 
 NEWS_URL = "https://newsapi.org/v2/everything"
 
