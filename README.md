@@ -43,6 +43,7 @@ flask_news_app/
 │
 ├── .gitignore
 └── README.md
+--- Procfile
 
 ---
 
@@ -56,4 +57,9 @@ cd newspaps
 ## Deployment
 
 1. Deployed on reder 
-➡️ Checkout :  
+➡️ Checkout :
+
+👤 Author
+
+Yash
+❤️ Built with pyhton & Flask  
