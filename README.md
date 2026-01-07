@@ -43,7 +43,6 @@ flask_news_app/
 │
 ├── .gitignore
 └── README.md
---- Procfile
 
 ---
 
