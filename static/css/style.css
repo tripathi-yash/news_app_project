@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, system-ui, sans-serif;
+    background: #f4f6fb;
+    color: #1f2937;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+    padding: 18px 0;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+}
+
+.tagline {
+    opacity: 0.85;
+}
+
+/* Search */
+.search-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.search-section h2 {
+    margin-bottom: 20px;
+}
+
+/* Floating form */
+.floating-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    align-items: end;
+}
+
+.field {
+    position: relative;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 14px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #f9fafb;
+    font-size: 0.95rem;
+}
+
+.field input:focus,
+.field select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.field label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #6b7280;
+    font-size: 0.85rem;
+    pointer-events: none;
+    transition: 0.2s ease;
+    background: white;
+    padding: 0 6px;
+}
+
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label,
+.field select:focus + label,
+.field select:not([value=""]) + label {
+    top: -6px;
+    font-size: 0.7rem;
+    color: #2563eb;
+}
+
+/* Button */
+.search-btn {
+    height: 46px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background: #1e40af;
+}
+
+/* News */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.news-card {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-6px);
+}
+
+.news-card h3 {
+    margin-bottom: 10px;
+}
+
+.news-card p {
+    color: #4b5563;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 25px;
+    color: #6b7280;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .floating-form {
+        grid-template-columns: 1fr;
+    }
+    .tagline {
+        display: none;
+    }
+}

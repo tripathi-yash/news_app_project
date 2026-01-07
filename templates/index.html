@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Search News - NewsPaps{% endblock %}
+
+{% block content %}
+
+<section class="search-section">
+    <h2>Search Latest News</h2>
+
+    <form class="floating-form" action="/news" method="get">
+
+        <div class="field">
+            <input type="text" name="q" id="query" placeholder=" " required>
+            <label for="query">Search Topic</label>
+        </div>
+
+        <div class="field">
+            <select name="language" id="language" required>
+                <option value="" disabled selected hidden></option>
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+            </select>
+            <label for="language">Language</label>
+        </div>
+
+        <div class="field">
+            <input type="number" name="limit" id="limit" value="5" min="1" max="20" placeholder=" ">
+            <label for="limit">Results Limit</label>
+        </div>
+
+        <button type="submit" class="search-btn">Search</button>
+    </form>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+</section>
+
+{% if articles %}
+<section class="news-grid">
+    {% for article in articles %}
+    <article class="news-card">
+        <h3>{{ article.title }}</h3>
+        <p>{{ article.description }}</p>
+    </article>
+    {% endfor %}
+</section>
+{% endif %}
+
+{% endblock %}
