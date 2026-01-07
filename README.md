@@ -55,7 +55,7 @@ cd newspaps
 
 ## Deployment
 
-1. Deployed on reder 
+1. Deployed on render 
 ➡️ Checkout : https://news-app-project-k4xq.onrender.com
 
 👤 Author
