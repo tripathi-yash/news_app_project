@@ -46,7 +46,7 @@ def main():
 
     if query:
         t = time.localtime()
-        to_time = time.strftime("%Y-%m-%dT%H:%M:%S",t)
+        to_time = time.strftime("%Y-%m-%dT%H:%M:%SZ", t)
         articles = get_news(query, pageSize=100, to=to_time)
     else: 
         print("error: Invalid query!")

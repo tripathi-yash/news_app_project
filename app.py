@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 import time
+from datetime import datetime, timezone, timedelta
 from news_service import get_news
 
 app = Flask(__name__)
@@ -21,10 +22,10 @@ def news():
         language = request.args.get("language", default="en", type=str)
         pageSize = request.args.get("pageSize", default=100, type=int)
 
-        from_time = "2026-01-01"
-
-        t=time.localtime()
-        to_time = time.strftime("%Y-%m-%dT%H:%M:%S",t)
+        today = datetime.now(timezone.utc)
+        one_month_ago = today - timedelta(days=30)
+        from_time = one_month_ago.strftime("%Y-%m-%dT%H:%M:%SZ")
+        to_time = today.strftime("%Y-%m-%dT%H:%M:%SZ")
 
         articles = get_news(
             query, 
@@ -44,6 +45,7 @@ def news():
         return render_template("index.html",articles = cleaned_articles), 200
     
     except RuntimeError as e:
+        print("ERROR:", e)   # 👈 ADD THIS
         return render_template("index.html", error=str(e))
 
 
