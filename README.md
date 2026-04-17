@@ -53,10 +53,34 @@ flask_news_app/
 git clone https://github.com/your-username/newspaps.git
 cd newspaps
 
-## Deployment
+2. Create Virtual Environment
+Windows
+python -m venv venv
+venv\Scripts\activate
 
-1. Deployed on render 
-➡️ Checkout : https://news-app-project-k4xq.onrender.com
+Mac/Linux
+python3 -m venv venv
+source venv/bin/activate
+
+3. Install Dependencies
+pip install -r requirements.txt
+
+4. Set Environment Variables
+Windows (PowerShell)
+setx API_KEY "your_api_key_here"
+
+Mac/Linux
+export API_KEY="your_api_key_here"
+
+⚠️ Restart terminal after setting environment variables
+
+5. Run the Application
+python app.py
+Open in browser: http://127.0.0.1:5000
+
+🌐 Deployment
+Deployed on Railway
+➡️ Live App: https://newsappproject-production.up.railway.app/
 
 👤 Author
 
