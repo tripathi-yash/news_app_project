@@ -80,7 +80,7 @@ Open in browser: http://127.0.0.1:5000
 
 🌐 Deployment
 Deployed on Railway
-➡️ Live App: https://newsappproject-production.up.railway.app/
+➡️ Live App: https://news-app-project-k4xq.onrender.com
 
 👤 Author
 
