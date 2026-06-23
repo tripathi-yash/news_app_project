@@ -79,7 +79,7 @@ python app.py
 Open in browser: http://127.0.0.1:5000
 
 🌐 Deployment
-Deployed on Railway
+Deployed on Render
 ➡️ Live App: https://news-app-project-k4xq.onrender.com
 
 👤 Author
